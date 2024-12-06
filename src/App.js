@@ -1,111 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Btn from './component/Btn';
+import Profile from './component/Profile';
 
 function App() {
 
 
-  const heading ="profiles";
-  const Verified = true;
-  const Dept="Coderz"; 
-  const Age =17;
-  
-
-  /**Algorithim 
-   * 
-   * return name
-  */
-
-  // //type 1
-  // function printName () {
-  //   console.log("Nawaf")
-  // }
-
-  // printName()
-  
-
-  //type 2
-  function getName() {
-  const name ="Nawaf";
-  return name;
-  }
-
-
-//type 3
-function printpassedName(name) {
-  console.log(name);
- 
-}
-
-// printpassedName("name")
-
-
-//type 4
-function add(a,b) {
-const result=a+b;
-return result;
-}
-
-
-
-
-
-// ternary operator
-// Syntax (Condition) ? statement1: statement2;
-
-
-// // Map
-// // number 
-// const number = [1,2,3,4,5,];
-// number.map((i) =>{
-//   console.log (i)
-// });
-
-
-// // String
-// const names = ["saad","prince","basheer","nawaf"];
-// names.map((name)=>{
-//   console.log(name)
-// })
-
- 
-// object
-const profiles = [
-  {name: "Saad",
-    age :19
-  },
-
-  {name: "Prince",
-    age :29
-  },
-
-  {name: "Basheer",
-    age :99
-  },
-
-  {name: "Nawaf",
-    age :35
-  },
-
- ];
-
- 
-profiles.map((profile)=>{
-  console.log(profile.name,profile.age)
-})
-
-
-
-
   return (
     <div className="App">
-     <h1>{heading}</h1>
-     <p>Name: {getName()}</p>
-     <p>Age: {Age}</p>
-     <p>Dept:{Dept}</p>
-     <p>Verified:{(Verified == true) ? "Yes" :"no"}</p>
-     <p>Result:{add(10,10)}</p>
+      <h1>Basic App</h1>
+      <Profile name="Nawaf" location="mumbra" />
+      {/* <Btn name="Sign Up" /> */}
     </div>
   );
 }
 
 export default App;
+
+
