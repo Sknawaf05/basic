@@ -2,33 +2,26 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
-function Btn({name,location}) {
+
+function Profile({profile}) {
 
 
-    // return (
-    //     // <div>
-    //     //     <p>Name: {name}</p>
-    //     //     <p>location: {location}</p>
-    //     // </div>
-    // )
 
 
+  
     return (
-        <Card style={{ width: '18rem',border:'2px solid black',  }}>
-          <Card.Img variant="top"src="https://th.bing.com/th/id/OIP.2o0q60qxVBJ6eKmvKuY4MwHaHa?rs=1&pid=ImgDetMain" />
+        <Card className='col-md-4'>
+          <Card.Img variant="top"src={profile.img} />
+
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>{profile.name}</Card.Title>
             <Card.Text>
-              
-              Some quick example text to build
-              on the card title and make up the
-              bulk of the card's content.
-              
+             {profile.disc}
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <a href={profile.btnbody} target='_'>  <Button variant="primary">{profile.btn} </Button></a>
           </Card.Body>
         </Card>
-      );
+      )
 }
 
-export default Btn;
+export default Profile;

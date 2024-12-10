@@ -1,7 +1,6 @@
-function Btn({name}) {
+function Btn({Login}) {
     return (
-        <button>{name}</button>
+        <button>{Login}</button>
     )
 }
-
 export default Btn;
